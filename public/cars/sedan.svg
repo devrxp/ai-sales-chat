@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eff6ff"/><stop offset="1" stop-color="#e0e7ff"/></linearGradient></defs>
+  <rect width="400" height="240" rx="16" fill="url(#bg)"/>
+  <ellipse cx="200" cy="186" rx="150" ry="10" fill="#1e293b" opacity=".12"/>
+  <path d="M50 160 Q50 135 80 130 L130 125 L165 95 Q175 88 190 88 L250 88 Q265 88 278 98 L315 125 L345 132 Q360 136 360 155 L360 165 L50 165 Z" fill="#2563eb"/>
+  <path d="M172 100 L190 96 L245 96 L270 122 L160 124 Z" fill="#bfdbfe" opacity=".9"/>
+  <circle cx="120" cy="170" r="22" fill="#1e293b"/><circle cx="120" cy="170" r="9" fill="#cbd5e1"/>
+  <circle cx="285" cy="170" r="22" fill="#1e293b"/><circle cx="285" cy="170" r="9" fill="#cbd5e1"/>
+  <text x="200" y="222" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#334155">Sedan Compacto</text>
+</svg>

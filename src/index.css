@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&display=swap');
+@import "tailwindcss";
+@source "../node_modules/@assistant-ui/react-ui";
+@source "../node_modules/@assistant-ui/react-markdown";
+
+/* Dentro de @layer base para não sobrescrever os utilitários do Tailwind (p-*, m-*).
+   O reset de margin/padding já vem do preflight do Tailwind. */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Red Hat Text', sans-serif;
+  }
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(37, 99, 235, 0.3); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(37, 99, 235, 0.6); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* ------------------------------------------------------------------
+   Ajustes no tema do assistant-ui
+   ------------------------------------------------------------------ */
+
+/* Esconde as iniciais padrão ("A" / "U") dos avatares */
+.aui-avatar-fallback {
+  color: transparent !important;
+}
+
+/* Avatar da assistente */
+.aui-assistant-message-root .aui-avatar-root {
+  position: relative;
+  overflow: visible !important;
+  border-radius: 99px;
+  background: linear-gradient(135deg, #2563eb, #4338ca) !important;
+}
+.aui-assistant-message-root .aui-avatar-root::after {
+  content: "🤖";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Avatar do usuário */
+.aui-user-message-root .aui-avatar-root {
+  position: relative;
+  overflow: visible !important;
+  border: 1px solid #d1d5db;
+  border-radius: 99px;
+  background-color: #e5e7eb !important;
+}
+.aui-user-message-root .aui-avatar-root::after {
+  content: "👤";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Rótulo com o nome da assistente acima de cada resposta */
+.aui-assistant-message-content {
+  position: relative;
+  padding-top: 1.5rem !important;
+}
+.aui-assistant-message-content::before {
+  content: "Bia · Assistente de vendas";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
